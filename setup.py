@@ -3,7 +3,7 @@ import sys
 import os
 import re
 
-PACKAGENAME = 'package'
+PACKAGENAME = 'tdam'
 packageDir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                           PACKAGENAME)
 
@@ -26,12 +26,13 @@ print(genRequirements)
 setup(# package information
       name=PACKAGENAME,
       version=__version__,
-      description='simple template repo',
+      description='A repository for Time Domain Astronomy Models',
       long_description=''' ''',
       # What code to include as packages
       packages=[PACKAGENAME],
       packagedir={PACKAGENAME: 'package'},
       # What data to include as packages
       include_package_data=True,
+      install_requires=['sncosmo', 'sfdmap', 'pandas'],
       package_data={PACKAGENAME:['example_data/*.dat']}
      )

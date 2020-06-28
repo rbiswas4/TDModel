@@ -1,4 +1,4 @@
-import package
+import tdam
 
 def test_import():
     """
